@@ -1,6 +1,9 @@
-package ru.netology.server.request;
+package ru.netology;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -17,7 +20,7 @@ public class Request {
         this.headers = headers;
         this.in = in;
     }
-    
+
 
     public String getMethod() {
         return method;

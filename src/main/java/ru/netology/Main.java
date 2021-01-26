@@ -1,15 +1,16 @@
 package ru.netology;
 
-import ru.netology.server.Server;
-
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.time.LocalDateTime;
 
 public class Main {
-    public static void main(String[] args) {
 
-        var server = new Server(64);
+    final static int portNumber = 9999;
+
+    public static void main(String[] args) throws IOException {
+        var server = new Server(portNumber);
 
         server.addHandler("GET", "/classic.html", ((request, out) -> {
             try {
@@ -35,6 +36,13 @@ public class Main {
             }
 
         }));
-        server.listen(9999);
+        
+
+        server.connectServer();
+
     }
+
 }
+
+
+

@@ -1,6 +1,4 @@
-package ru.netology.server.handler;
-
-import ru.netology.server.request.Request;
+package ru.netology;
 
 import java.io.BufferedOutputStream;
 
