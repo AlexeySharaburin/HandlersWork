@@ -15,21 +15,6 @@ public class Server {
     private final Map<String, Map<String, Handler>> handlers;
 
 
-
-//    private final Handler notFoundHandler = (request, out) -> {
-//        try {
-//            out.write((
-//                    "HTTP/1.1 404 Not Found\r\n" +
-//                            "Content-Length: 0\r\n" +
-//                            "Connection: close\r\n" +
-//                            "\r\n"
-//            ).getBytes());
-//            out.flush();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    };
-
     public Server(int portNumber) {
         this.portNumber = portNumber;
         handlers = new ConcurrentHashMap<>();
